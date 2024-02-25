@@ -2,6 +2,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>HomePage</h1>
+      <img src="/images/frost-2.jpg" />
     </div>
   );
 };
