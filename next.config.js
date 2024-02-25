@@ -1,5 +1,7 @@
-module.exports = {
+const nextConfig = {
   basePath: '/profile',
-  assetPrefix: '/profile/',
-  distDir: 'out',
+  output: 'export',
+  reactStrictMode: true,
 }
+
+module.exports = nextConfig
