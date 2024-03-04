@@ -1,10 +1,7 @@
-const HomePage = () => {
-  return (
-    <div>
-      <h1>HomePage</h1>
-      <img src="/profile/images/frost-2.jpg" />
-    </div>
-  );
-};
+import Opening from '/view/Opening'
 
-export default HomePage;
+const OpeningPage = () => {
+  return <Opening />
+}
+
+export default OpeningPage
