@@ -41,10 +41,6 @@ const MainStory = ({ className }) => {
     setAnswer(QA[`ANSWER_${step.current}`])
   }
 
-  const toggleButtons = () => {
-    setShowButtons(!showButtons)
-  }
-
   const Skip = () => {
     setIsTyping(false)
     setShowButtons(true)
@@ -56,10 +52,10 @@ const MainStory = ({ className }) => {
       <div className="book">
         <div className="question">{Parser(question)}</div>
         <div className="answer">
-          {isTyping && <Typing text={answer} callback={toggleButtons} />}
+          {isTyping && <Typing text={answer} callback={Skip} />}
           {!isTyping && Parser(answer)}
         </div>
-        {isTyping && (
+        {!showButtons && isTyping && (
           <div className="buttons">
             <button
               type="button"
