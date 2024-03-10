@@ -15,4 +15,8 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+
+  .pointer {
+    cursor: pointer;
+  }
 `

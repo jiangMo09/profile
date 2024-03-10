@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 import classnames from 'classnames'
 import styled from 'styled-components'
 import 'animate.css/animate.min.css'
@@ -13,6 +14,7 @@ const TEXT_STEP_3 = '不要這樣啦QQ~~看一下~看一下啦~'
 const TEXT_STEP_4 = '不管你的意願~永遠Yes or Yes~'
 
 const Opening = ({ className }) => {
+  const router = useRouter()
   const [showMouse, setShowMouse] = useState(false)
   const [text, setText] = useState(TEXT_STEP_1)
   const hamsterRef = useRef(null)
@@ -21,7 +23,7 @@ const Opening = ({ className }) => {
 
   const nextStep = (choose) => {
     if (choose) {
-      console.log('yes')
+      router.push('/story')
     }
 
     if (!choose && text == TEXT_STEP_2) {
@@ -55,7 +57,7 @@ const Opening = ({ className }) => {
             pointer: isStep1,
           }
         )}
-        src="/profile/images/openingPage/hamster.png"
+        src="/profile/images/opening/hamster.png"
         onClick={() => {
           if (isStep1) {
             setText(TEXT_STEP_2)
@@ -65,8 +67,13 @@ const Opening = ({ className }) => {
       {showMouse && (
         <>
           <img
-            className="click-mouse animate__animated animate__fadeIn"
-            src="/profile/images/openingPage/click-mouse.gif"
+            className={classnames(
+              'click-mouse animate__animated animate__fadeIn',
+              {
+                pointer: isStep1,
+              }
+            )}
+            src="/profile/images/opening/click-mouse.gif"
             onClick={() => {
               if (isStep1) {
                 setText(TEXT_STEP_2)

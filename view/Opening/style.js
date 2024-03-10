@@ -3,15 +3,11 @@ import { css } from 'styled-components'
 const style = css`
   width: 100vw;
   height: 100vh;
-  background-image: url('/profile/images/openingPage/background.png');
+  background-image: url('/profile/images/opening/background.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-
-  .pointer {
-    cursor: pointer;
-  }
 
   .hamster {
     position: absolute;
