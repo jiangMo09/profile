@@ -13,7 +13,14 @@ function MyApp({ Component, pageProps }) {
           href="/profile/images/opening/hamster.png"
           type="image/x-icon"
         />
-        <meta property="og:image" content="/profile/images/mainStory/hamster.gif" />
+        <meta
+          property="og:image"
+          content="/profile/images/mainStory/hamster.gif"
+        />
+        <meta
+          property="og:description"
+          content="一隻前端倉鼠勇闖後端世界的冒險故事(,,・ω・,,)"
+        />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
