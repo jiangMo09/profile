@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export",  // <=== enables static exports
-    reactStrictMode: true,
-  };
-  
-  module.exports = nextConfig;
+  basePath: "/profile",
+  output: "export",
+  reactStrictMode: true,
+};
+
+module.exports = nextConfig;
