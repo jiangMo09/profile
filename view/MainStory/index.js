@@ -4,12 +4,14 @@ import { useState, useRef } from 'react'
 
 import * as QA from './Q&A'
 
+import Bonus from './Bonus'
 import Header from './Header'
 import Typing from './Typing'
 import style from './style'
 
 const MainStory = ({ className }) => {
   const [showButtons, setShowButtons] = useState(false)
+  const [showBonus, setShowBonus] = useState(false)
   const [isTyping, setIsTyping] = useState(true)
   const [question, setQuestion] = useState(QA.QUESTION_1)
   const [answer, setAnswer] = useState(QA.ANSWER_1)
@@ -30,6 +32,7 @@ const MainStory = ({ className }) => {
 
   const nextStep = () => {
     if (step.current === 8) {
+      setShowBonus(true)
       return
     }
     setShowButtons(false)
@@ -41,9 +44,13 @@ const MainStory = ({ className }) => {
     setAnswer(QA[`ANSWER_${step.current}`])
   }
 
-  const Skip = () => {
+  const skip = () => {
     setIsTyping(false)
     setShowButtons(true)
+  }
+
+  const closeBonus = () => {
+    setShowBonus(false)
   }
 
   return (
@@ -52,7 +59,7 @@ const MainStory = ({ className }) => {
       <div className="book">
         <div className="question">{Parser(question)}</div>
         <div className="answer">
-          {isTyping && <Typing text={answer} callback={Skip} />}
+          {isTyping && <Typing text={answer} callback={skip} />}
           {!isTyping && Parser(answer)}
         </div>
         {!showButtons && isTyping && (
@@ -60,9 +67,9 @@ const MainStory = ({ className }) => {
             <button
               type="button"
               className="skip btn btn-outline-danger"
-              onClick={Skip}
+              onClick={skip}
             >
-              Skip
+              skip
             </button>
           </div>
         )}
@@ -77,18 +84,17 @@ const MainStory = ({ className }) => {
                 上一題
               </button>
             )}
-            {step.current != 8 && (
-              <button
-                type="button"
-                className="next btn btn-outline-success"
-                onClick={nextStep}
-              >
-                下一題
-              </button>
-            )}
+            <button
+              type="button"
+              className="next btn btn-outline-success"
+              onClick={nextStep}
+            >
+              {step.current != 8 ? '下一題' : '看彩蛋ヽ(=^･ω･^=)丿'}
+            </button>
           </div>
         )}
       </div>
+      {showBonus && <Bonus callback={closeBonus} />}
     </div>
   )
 }
