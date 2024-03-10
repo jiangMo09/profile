@@ -9,9 +9,9 @@ import style from './style'
 
 const TEXT_STEP_1 = '拜託點我QQ...'
 const TEXT_STEP_2 =
-  'Hi~ 我是一隻前端倉鼠，名字是Leona。<br>我有一場渴望已久的冒險，正在試圖追求它。<br>你願意聽聽努力的前端倉鼠故事嗎？'
+  'Hi~ 我是一隻前端倉鼠，名字是 Leona。<br>我有一場渴望已久的冒險，正在試圖追求它。<br>你願意聽聽努力的前端倉鼠故事嗎？'
 const TEXT_STEP_3 = '不要這樣啦QQ~~看一下~看一下啦~'
-const TEXT_STEP_4 = '不管你的意願~永遠Yes or Yes~'
+const TEXT_STEP_4 = '不管你的意願~永遠 Yes or Yes ~'
 
 const Opening = ({ className }) => {
   const router = useRouter()

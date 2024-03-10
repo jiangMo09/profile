@@ -69,7 +69,7 @@ const MainStory = ({ className }) => {
               className="skip btn btn-outline-danger"
               onClick={skip}
             >
-              skip
+              Skip
             </button>
           </div>
         )}

@@ -9,7 +9,7 @@ const Bonus = ({ className, callback }) => {
         className="bonus"
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/OQoxzDoAKz4?si=sDHyeyw-wxq_k1aJ&autoplay=1"
+        src="https://www.youtube.com/embed/5-Q0xvcgSNg?si=jpSn7UqniAE-o-n0&autoplay=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
