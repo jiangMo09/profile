@@ -13,7 +13,7 @@ const TEXT_STEP_2 =
 const TEXT_STEP_3 = '不要這樣啦QQ~~看一下~看一下啦~'
 const TEXT_STEP_4 = '不管你的意願~永遠 Yes or Yes ~'
 
-const Opening = ({ className }) => {
+const Opening = ({ className, callback }) => {
   const router = useRouter()
   const [showMouse, setShowMouse] = useState(false)
   const [text, setText] = useState(TEXT_STEP_1)
@@ -23,7 +23,7 @@ const Opening = ({ className }) => {
 
   const nextStep = (choose) => {
     if (choose) {
-      router.push('/story')
+      callback()
     }
 
     if (!choose && text == TEXT_STEP_2) {
