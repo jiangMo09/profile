@@ -10,7 +10,7 @@ const style = css`
   position: relative;
 
   .book {
-    min-height: 60vh;
+    min-height: 62vh;
     background-color: #fffae6;
     border-radius: 5px;
     margin: 10vh calc((100vw - 1000px) / 2) 0;
