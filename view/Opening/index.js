@@ -7,7 +7,7 @@ import Parser from 'html-react-parser'
 
 import style from './style'
 
-const TEXT_STEP_1 = '拜託點我QQ...'
+const TEXT_STEP_1 = '拜託點我 QQ...'
 const TEXT_STEP_2 =
   'Hi~ 我是一隻前端倉鼠，名字是 Leona。<br>我有一場渴望已久的冒險，正在試圖追求它。<br>你願意聽聽努力的前端倉鼠故事嗎？'
 const TEXT_STEP_3 = '不要這樣啦QQ~~看一下~看一下啦~'
