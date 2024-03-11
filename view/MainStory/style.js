@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 const style = css`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url('/profile/images/mainStory/background.jpg');
   background-size: cover;
   background-position: center center;
