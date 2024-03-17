@@ -1,24 +1,17 @@
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import 'animate.css/animate.min.css'
 
 import style from './style'
 
-const Header = ({ className }) => {
-  const router = useRouter()
-
-  const goToOpening = () => {
-    router.push('/')
-  }
-
+const Header = ({ className, callback }) => {
   return (
     <div className={className}>
       <img
         className="hamster pointer"
         src="/profile/images/mainStory/hamster.gif"
-        onClick={goToOpening}
+        onClick={callback}
       />
-      <span className="pointer" onClick={goToOpening}>
+      <span className="pointer" onClick={callback}>
         Leona Jiang
       </span>
     </div>

@@ -1,7 +1,7 @@
-import Opening from '/view/Opening'
+import Main from '/view'
 
-const OpeningPage = () => {
-  return <Opening />
+const MainPage = () => {
+  return <Main />
 }
 
-export default OpeningPage
+export default MainPage

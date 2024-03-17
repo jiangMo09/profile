@@ -9,7 +9,7 @@ import Header from './Header'
 import Typing from './Typing'
 import style from './style'
 
-const MainStory = ({ className }) => {
+const MainStory = ({ className, callback }) => {
   const [showButtons, setShowButtons] = useState(false)
   const [showBonus, setShowBonus] = useState(false)
   const [isTyping, setIsTyping] = useState(true)
@@ -55,7 +55,7 @@ const MainStory = ({ className }) => {
 
   return (
     <div className={className}>
-      <Header />
+      <Header callback={callback} />
       <div className="book">
         <div className="question">{Parser(question)}</div>
         <div className="answer">
