@@ -20,10 +20,6 @@ const style = css`
   @media (max-width: 480px) {
     .bonus {
       width: 90vw;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 `

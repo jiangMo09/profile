@@ -1,9 +1,9 @@
-import { css } from 'styled-components';
-import { pxToVw } from '/helper/size';
+import { css } from 'styled-components'
+import { pxToVw } from '/helper/size'
 
 const style = css`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url('/profile/images/mainStory/background.jpg');
   background-size: cover;
   background-position: center center;
@@ -56,10 +56,6 @@ const style = css`
       }
 
       .answer {
-        font-size: 16px;
-        font-weight: lighter;
-        line-height: 32px;
-        letter-spacing: 1px;
         margin-top: 2vh;
         overflow: scroll;
         height: 46vh;
@@ -80,7 +76,6 @@ const style = css`
     .book {
       height: 70vh;
       margin: 5vh ${pxToVw(20)};
-      padding-bottom: 5vh;
 
       .question {
         font-size: ${pxToVw(14)};
@@ -88,24 +83,20 @@ const style = css`
 
       .answer {
         font-size: ${pxToVw(12)};
-        font-weight: lighter;
         line-height: ${pxToVw(24)};
-        letter-spacing: 1px;
-        margin-top: 2vh;
-        overflow: scroll;
         height: 55vh;
       }
 
-      .last-answer {
-        box-shadow: inset 0 ${pxToVw(-10)} ${pxToVw(10)} ${pxToVw(-10)}
-          rgba(0, 0, 0, 0.2);
-      }
+      .buttons {
+        bottom: 1.5vh;
+        right: 4vw;
 
-      .btn {
-        font-size: ${pxToVw(12)};
+        .btn {
+          font-size: ${pxToVw(12)};
+        }
       }
     }
   }
-`;
+`
 
-export default style;
+export default style
