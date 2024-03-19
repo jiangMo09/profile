@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import Parser from 'html-react-parser'
 import styled from 'styled-components'
 import { useState, useRef } from 'react'
@@ -58,7 +59,11 @@ const MainStory = ({ className, callback }) => {
       <Header callback={callback} />
       <div className="book">
         <div className="question">{Parser(question)}</div>
-        <div className="answer">
+        <div
+          className={classnames('answer', {
+            'last-answer ': step.current === 8,
+          })}
+        >
           {isTyping && <Typing text={answer} callback={skip} />}
           {!isTyping && Parser(answer)}
         </div>
