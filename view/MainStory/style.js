@@ -1,4 +1,5 @@
-import { css } from 'styled-components'
+import { css } from 'styled-components';
+import { pxToVw } from '/helper/size';
 
 const style = css`
   width: 100vw;
@@ -43,6 +44,68 @@ const style = css`
       }
     }
   }
-`
 
-export default style
+  @media (max-width: 768px) {
+    .book {
+      height: 50vh;
+      margin: 5vh ${pxToVw(20)};
+      padding-bottom: 5vh;
+
+      .question {
+        font-size: 20px;
+      }
+
+      .answer {
+        font-size: 16px;
+        font-weight: lighter;
+        line-height: 32px;
+        letter-spacing: 1px;
+        margin-top: 2vh;
+        overflow: scroll;
+        height: 46vh;
+      }
+
+      .last-answer {
+        box-shadow: inset 0 ${pxToVw(-10)} ${pxToVw(10)} ${pxToVw(-10)}
+          rgba(0, 0, 0, 0.2);
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .book {
+      height: 70vh;
+      margin: 5vh ${pxToVw(20)};
+      padding-bottom: 5vh;
+
+      .question {
+        font-size: ${pxToVw(14)};
+      }
+
+      .answer {
+        font-size: ${pxToVw(12)};
+        font-weight: lighter;
+        line-height: ${pxToVw(24)};
+        letter-spacing: 1px;
+        margin-top: 2vh;
+        overflow: scroll;
+        height: 55vh;
+      }
+
+      .last-answer {
+        box-shadow: inset 0 ${pxToVw(-10)} ${pxToVw(10)} ${pxToVw(-10)}
+          rgba(0, 0, 0, 0.2);
+      }
+
+      .btn {
+        font-size: ${pxToVw(12)};
+      }
+    }
+  }
+`;
+
+export default style;

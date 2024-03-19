@@ -1,4 +1,5 @@
 import { css } from 'styled-components'
+import { pxToVw } from '/helper/size'
 
 const style = css`
   width: 100vw;
@@ -61,6 +62,18 @@ const style = css`
     display: flex;
     justify-content: space-evenly;
     margin-top: 1vh;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${pxToVw(14)};
+
+    .btn {
+      font-size: ${pxToVw(14)};
+    }
   }
 `
 
